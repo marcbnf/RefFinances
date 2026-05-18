@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles de base pour le corps */
+body {
+  @apply bg-zinc-100 dark:bg-zinc-900;
+}
+
+/* Classe utilitaire pour le conteneur principal de l'application */
+.app-safe-layout {
+  /* Ajoute un padding supplémentaire standard */
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  
+  /* S'assure que l'application prend toute la hauteur */
+  min-height: 100vh;
+}
+
+/* Gère le padding plus large sur les écrans sm+ */
+@media (min-width: 640px) {
+  .app-safe-layout {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
